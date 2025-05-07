@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitFica - Métricas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagens/logo_sem_fundo.png" alt="Logo GitFica" >
+      GitFica
+    </div>
+    <nav>
+      <ul>
+        <li><i class="fas fa-code-branch"></i> Gestão GitHub</li>
+        <li class="active"><i class="fas fa-chart-line"></i> Métricas</li>
+        <li><i class="fas fa-trophy"></i> Ranking</li>
+        <li><i class="fas fa-tasks"></i> Missões</li>
+        <li><i class="fas fa-users"></i> Equipes</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <section class="user-profile">
+      <img src="imagens/avatar.png" alt="Avatar do usuário" class="avatar">
+      <h2>nome usuário</h2>
+      <p class="title"><i class="fas fa-medal"></i> Mestre dos Pull Requests</p>
+      <div class="progress-bar">
+        <div class="progress" style="width: 39%;"></div>
+      </div>
+      <p><i class="fas fa-star"></i> Experiência: 390 / 1000</p>
+      <p><i class="fas fa-level-up-alt"></i> Nível 10</p>
+    </section>
+
+    <section class="summary">
+      <h3><i class="fas fa-chart-pie"></i> Resumo</h3>
+      <ul>
+        <li><i class="fas fa-code-commit"></i> Total de commits: 120</li>
+        <li><i class="fas fa-exclamation-circle"></i> Total de issues abertas: 15</li>
+        <li><i class="fas fa-code-pull-request"></i> Total de pull requests abertos: 8</li>
+        <li><i class="fas fa-code-merge"></i> Total de PRs fechados por terceiros: 5</li>
+        <li><i class="fas fa-check-circle"></i> Total de PRs resolvidos por terceiros: 4</li>
+        <li><i class="fas fa-code-branch"></i> Total de merges: 11</li>
+      </ul>
+      <h4><i class="fas fa-trophy"></i> Total de pontos: 850</h4>
+    </section>
+
+    <section class="charts">
+      <h3><i class="fas fa-chart-bar"></i> Estatísticas Gerais</h3>
+      <div class="chart-box">
+        <div class="chart-placeholder">
+          <i class="fas fa-chart-bar fa-3x"></i>
+          <p>Gráfico de barras</p>
+        </div>
+        <div class="chart-placeholder">
+          <i class="fas fa-chart-pie fa-3x"></i>
+          <p>Gráfico de pizza</p>
+        </div>
+        <div class="chart-placeholder">
+          <i class="fas fa-users fa-3x"></i>
+          <p>Comparativo por equipe</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
