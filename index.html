@@ -11,7 +11,7 @@
 <body>
   <header>
     <div class="logo">
-      <img src="imagens/logo_sem_fundo.png" alt="Logo GitFica" >
+      <img src="imagens/logo_sem_fundo.png" alt="Logo GitFica">
       GitFica
     </div>
     <nav>
@@ -26,47 +26,142 @@
   </header>
 
   <main class="dashboard">
-    <section class="user-profile">
-      <img src="imagens/avatar.png" alt="Avatar do usuário" class="avatar">
+    <aside class="user-profile">
+      <div class="avatar-container">
+        <img src="imagens/avatar.png" alt="Avatar do usuário" class="avatar">
+        <div class="avatar-level">
+          <span>Nível 10</span>
+        </div>
+      </div>
       <h2>nome usuário</h2>
       <p class="title"><i class="fas fa-medal"></i> Mestre dos Pull Requests</p>
-      <div class="progress-bar">
-        <div class="progress" style="width: 39%;"></div>
-      </div>
-      <p><i class="fas fa-star"></i> Experiência: 390 / 1000</p>
-      <p><i class="fas fa-level-up-alt"></i> Nível 10</p>
-    </section>
 
-    <section class="summary">
-      <h3><i class="fas fa-chart-pie"></i> Resumo</h3>
-      <ul>
-        <li><i class="fas fa-code-commit"></i> Total de commits: 120</li>
-        <li><i class="fas fa-exclamation-circle"></i> Total de issues abertas: 15</li>
-        <li><i class="fas fa-code-pull-request"></i> Total de pull requests abertos: 8</li>
-        <li><i class="fas fa-code-merge"></i> Total de PRs fechados por terceiros: 5</li>
-        <li><i class="fas fa-check-circle"></i> Total de PRs resolvidos por terceiros: 4</li>
-        <li><i class="fas fa-code-branch"></i> Total de merges: 11</li>
-      </ul>
-      <h4><i class="fas fa-trophy"></i> Total de pontos: 850</h4>
-    </section>
-
-    <section class="charts">
-      <h3><i class="fas fa-chart-bar"></i> Estatísticas Gerais</h3>
-      <div class="chart-box">
-        <div class="chart-placeholder">
-          <i class="fas fa-chart-bar fa-3x"></i>
-          <p>Gráfico de barras</p>
+      <div class="streak-container">
+        <div class="streak-info">
+          <i class="fas fa-fire"></i>
+          <div class="streak-details">
+            <span class="streak-count">7</span>
+            <span class="streak-label">dias seguidos</span>
+          </div>
         </div>
-        <div class="chart-placeholder">
-          <i class="fas fa-chart-pie fa-3x"></i>
-          <p>Gráfico de pizza</p>
-        </div>
-        <div class="chart-placeholder">
-          <i class="fas fa-users fa-3x"></i>
-          <p>Comparativo por equipe</p>
+        <div class="streak-calendar">
+          <div class="calendar-grid">
+            <!-- Dias da semana serão preenchidos via JavaScript -->
+          </div>
         </div>
       </div>
-    </section>
+
+      <div class="performance-summary">
+        <h3><i class="fas fa-chart-line"></i> Resumo Semanal</h3>
+        <div class="summary-stats">
+          <div class="stat-item">
+            <i class="fas fa-code-commit"></i>
+            <div class="stat-info">
+              <span class="stat-value">+25</span>
+              <span class="stat-label">commits</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-code-pull-request"></i>
+            <div class="stat-info">
+              <span class="stat-value">+3</span>
+              <span class="stat-label">PRs</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <i class="fas fa-star"></i>
+            <div class="stat-info">
+              <span class="stat-value">+150</span>
+              <span class="stat-label">pontos</span>
+            </div>
+          </div>
+        </div>
+        <div class="summary-progress">
+          <div class="progress-label">
+            <span>Meta semanal</span>
+            <span>75%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achievements">
+        <h3><i class="fas fa-trophy"></i> Conquistas</h3>
+        <div class="achievement-grid">
+          <div class="achievement unlocked">
+            <i class="fas fa-code-branch"></i>
+            <span>Primeiro PR</span>
+          </div>
+          <div class="achievement unlocked">
+            <i class="fas fa-code"></i>
+            <span>100 Commits</span>
+          </div>
+          <div class="achievement locked">
+            <i class="fas fa-users"></i>
+            <span>Líder de Equipe</span>
+          </div>
+          <div class="achievement unlocked">
+            <i class="fas fa-bug"></i>
+            <span>Caçador de Bugs</span>
+          </div>
+          <div class="achievement locked">
+            <i class="fas fa-star"></i>
+            <span>Estrela do Mês</span>
+          </div>
+          <div class="achievement locked">
+            <i class="fas fa-rocket"></i>
+            <span>Contribuidor VIP</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <section class="summary">
+        <h3><i class="fas fa-chart-pie"></i> Resumo</h3>
+        <ul>
+          <li data-metric="commits"><i class="fas fa-code-commit"></i> Total de commits: <span class="metric-value">120</span></li>
+          <li data-metric="issues"><i class="fas fa-exclamation-circle"></i> Total de issues abertas: <span class="metric-value">15</span></li>
+          <li data-metric="pullRequests"><i class="fas fa-code-pull-request"></i> Total de pull requests abertos: <span class="metric-value">8</span></li>
+          <li data-metric="closedPRs"><i class="fas fa-code-merge"></i> Total de PRs fechados por terceiros: <span class="metric-value">5</span></li>
+          <li data-metric="resolvedPRs"><i class="fas fa-check-circle"></i> Total de PRs resolvidos por terceiros: <span class="metric-value">4</span></li>
+          <li data-metric="merges"><i class="fas fa-code-branch"></i> Total de merges: <span class="metric-value">11</span></li>
+        </ul>
+        <h4><i class="fas fa-trophy"></i> Total de pontos: <span class="metric-value">850</span></h4>
+      </section>
+
+      <section class="filter-box">
+        <h3><i class="fas fa-filter"></i> Filtros de Métricas</h3>
+        <div class="filter-buttons">
+          <button class="filter-btn" data-timeframe="week"><i class="fas fa-calendar-week"></i> Semana</button>
+          <button class="filter-btn active" data-timeframe="month"><i class="fas fa-calendar-alt"></i> Mês</button>
+          <button class="filter-btn" data-timeframe="year"><i class="fas fa-calendar"></i> Ano</button>
+        </div>
+      </section>
+
+      <section class="charts">
+        <h3><i class="fas fa-chart-bar"></i> Estatísticas Gerais</h3>
+        <div class="chart-box">
+          <div class="chart-container">
+            <h4>Atividade por Dia</h4>
+            <canvas id="activityChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h4>Distribuição de Atividades</h4>
+            <canvas id="distributionChart"></canvas>
+          </div>
+          <div class="chart-container">
+            <h4>Contribuições por Equipe</h4>
+            <canvas id="teamChart"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
